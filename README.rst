@@ -9,19 +9,19 @@ pg_backup_rotated.sh - The same as above except it will delete expired backups b
 Cron
 ====
 
-https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/
-
 crontab -e
-5 0 * * * /path/to/command
+5 0 * * * /path/to/command ::
 
-* * * * * command to be executed
-- - - - -
-| | | | |
-| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
-| | | ------- Month (1 - 12)
-| | --------- Day of month (1 - 31)
-| ----------- Hour (0 - 23)
-------------- Minute (0 - 59)
+
+
+      * * * * * command to be executed
+      - - - - -
+      | | | | |
+      | | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+      | | | ------- Month (1 - 12)
+      | | --------- Day of month (1 - 31)
+      | ----------- Hour (0 - 23)
+      ------------- Minute (0 - 59
 
 
 Restore
