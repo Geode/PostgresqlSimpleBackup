@@ -28,9 +28,10 @@ crontab -e
 Restore
 =======
 
-pg_restore --list census.backup
+pg_restore --list archive.backup
 
-pg_dump --port=54321 --schema=census --file=census.backup
+createdb --port 54321 mons1
+pg_restore --dbname=mons1 --port 54321 --username=postgres archive.backup
 
 Further Readings and links
 ==========================
