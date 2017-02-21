@@ -29,6 +29,7 @@ Restore
 =======
 
 pg_restore --list census.backup
+
 pg_dump --port=54321 --schema=census --file=census.backup
 
 Further Readings and links
